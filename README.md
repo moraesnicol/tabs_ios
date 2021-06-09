@@ -15,6 +15,6 @@
 
 # :camera: Screenshots
 <div align="center">
-   <img src="https://github.com/moraesnicol/tinder_iOS/blob/main/tindercards.gif" >
+   <img src="https://github.com/moraesnicol/tabs_ios/blob/main/tabios.gif" >
 
 </div>
