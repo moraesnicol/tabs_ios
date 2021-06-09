@@ -10,18 +10,81 @@
         <!--Tabview-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController title="Tabview" modalPresentationStyle="fullScreen" interfaceStyle="light" id="BYZ-38-t0r" customClass="ViewController" customModule="tabs_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="ILo-YF-j5g">
+                                <rect key="frame" x="20" y="104" width="374" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Resumo"/>
+                                    <segment title="Termos Completos"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlOutlet:" destination="BYZ-38-t0r" eventType="valueChanged" id="aA6-sT-3Hu"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ot-2t-qhN">
+                                <rect key="frame" x="20" y="136" width="374" height="237"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="237" id="Cia-XJ-ewq"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="TextLabel">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="15"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28e-sI-xL4">
+                                <rect key="frame" x="20" y="190" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="financeicon" translatesAutoresizingMaskIntoConstraints="NO" id="7Dd-L5-awM">
+                                <rect key="frame" x="20" y="153" width="26" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="N1O-Qv-0a5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ILo-YF-j5g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="6DK-n8-vrk"/>
+                            <constraint firstItem="6Ot-2t-qhN" firstAttribute="top" secondItem="28e-sI-xL4" secondAttribute="bottom" constant="-75" id="7w2-OO-YBE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Ot-2t-qhN" secondAttribute="trailing" constant="20" id="86V-Dc-u4C"/>
+                            <constraint firstItem="ILo-YF-j5g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Aaq-n8-T9T"/>
+                            <constraint firstItem="28e-sI-xL4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KQn-rJ-8Me"/>
+                            <constraint firstItem="ILo-YF-j5g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Ln5-67-Odx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ILo-YF-j5g" secondAttribute="trailing" constant="20" id="OAF-0m-E7o"/>
+                            <constraint firstItem="6Ot-2t-qhN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OcI-5Y-Daf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Dd-L5-awM" secondAttribute="trailing" constant="368" id="UfX-zJ-raI"/>
+                            <constraint firstItem="6Ot-2t-qhN" firstAttribute="top" secondItem="ILo-YF-j5g" secondAttribute="bottom" constant="1" id="aT6-Cf-zy6"/>
+                            <constraint firstItem="ILo-YF-j5g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dqS-h9-3Qr"/>
+                            <constraint firstItem="28e-sI-xL4" firstAttribute="top" secondItem="7Dd-L5-awM" secondAttribute="bottom" constant="8" symbolic="YES" id="eu5-Ct-GFN"/>
+                            <constraint firstItem="6Ot-2t-qhN" firstAttribute="top" secondItem="ILo-YF-j5g" secondAttribute="bottom" constant="1" id="gpP-cu-sI1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ILo-YF-j5g" secondAttribute="trailing" constant="20" id="hFe-PL-0rk"/>
+                            <constraint firstItem="7Dd-L5-awM" firstAttribute="leading" secondItem="28e-sI-xL4" secondAttribute="leading" id="mKj-mX-yfY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mqm-iV-n1K"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="TextLabel" destination="6Ot-2t-qhN" id="3gX-Lq-phG"/>
+                        <outlet property="TextTitleLabel" destination="28e-sI-xL4" id="swX-of-Yff"/>
+                        <outlet property="iconImage" destination="7Dd-L5-awM" id="uCC-dJ-D0I"/>
+                        <outlet property="segmentedControlOutlet" destination="ILo-YF-j5g" id="Qb2-sH-48u"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1960.8695652173915" y="85.714285714285708"/>
         </scene>
@@ -46,4 +109,7 @@
             <point key="canvasLocation" x="1050.7246376811595" y="85.714285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="financeicon" width="50" height="50"/>
+    </resources>
 </document>
