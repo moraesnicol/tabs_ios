@@ -13,3 +13,8 @@
 </p>
 
 
+# :camera: Screenshots
+<div align="center">
+   <img src="https://github.com/moraesnicol/tinder_iOS/blob/main/tindercards.gif" >
+
+</div>
